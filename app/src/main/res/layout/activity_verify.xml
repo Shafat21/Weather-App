@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:cardCornerRadius="@dimen/loginCardRadius"
+    android:orientation="vertical"
+    style="@style/loginParent">
+
+    <ScrollView
+        style="@style/parent">
+
+        <RelativeLayout
+            style="@style/parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_alignParentTop="true"
+                android:weightSum="12"
+                tools:ignore="DisableBaselineAlignment">
+
+                <LinearLayout
+                    style="@style/parent"
+                    android:background="@drawable/login_shape_bk"
+                    android:orientation="vertical"
+                    android:layout_weight="3"
+                    tools:ignore="InefficientWeight">
+
+                    <ImageView
+                        style="@style/parent"
+                        android:background="@drawable/ic_login_bk"
+                        android:contentDescription="@string/login_background"
+                        tools:ignore="ImageContrastCheck" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_alignParentTop="true"
+                android:orientation="vertical"
+                android:layout_marginTop="40dp"
+                android:layout_marginRight="30dp"
+                android:layout_marginLeft="30dp">
+
+                <TextView
+                    style="@style/headerText"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="40dp"
+                    android:text="@string/mms_weather"
+                    tools:ignore="TextContrastCheck" />
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    app:cardCornerRadius="@dimen/loginCardRadius"
+                    android:elevation="5dp"
+                    android:layout_gravity="center"
+                    android:id="@+id/layout_register"
+                    android:layout_marginTop="50dp"
+                    style="@style/loginCard"
+                    android:layout_marginBottom="@dimen/loginViewsMargin"
+                    android:background="@color/whiteCardColor">
+
+                    <LinearLayout
+                        style="@style/linearParent"
+                        android:layout_gravity="center"
+                        android:padding="@dimen/loginViewsMargin">
+
+                        <TextView
+                            style="@style/headerTextPrimary"
+                            android:layout_marginTop="@dimen/loginViewsMargin"
+                            android:text="@string/verification"
+                            tools:ignore="TextContrastCheck" />
+
+                        <TextView
+                            style="@style/parent"
+                            android:layout_marginTop="@dimen/loginViewsMargin"
+                            android:text="@string/we_have_sent_a_verification_code_on_your_mobile_number_please_verify_it_first"
+                            android:textAlignment="center"
+                            android:textColor="@color/primaryTextColor"
+                            tools:ignore="TextContrastCheck"/>
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            android:id="@+id/textInputEmail"
+                            style="@style/parent"
+                            android:layout_marginTop="@dimen/loginViewsMargin">
+
+                            <EditText
+                                android:id="@+id/verifycode"
+                                style="@style/modifiedEditText"
+                                android:hint="@string/verify_code"
+                                android:inputType="textEmailAddress"
+                                android:maxLines="1"
+                                tools:ignore="Autofill,TextContrastCheck,VisualLintTextFieldSize" />
+                        </com.google.android.material.textfield.TextInputLayout>
+
+                        <Button
+                            android:id="@+id/verify"
+                            style="@style/loginButton"
+                            android:layout_gravity="center_horizontal"
+                            android:layout_marginTop="@dimen/loginViewsMargin"
+                            android:text="Verify"
+                            tools:ignore="HardcodedText" />
+                        
+                    </LinearLayout>
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </RelativeLayout>
+
+    </ScrollView>
+
+</RelativeLayout>
